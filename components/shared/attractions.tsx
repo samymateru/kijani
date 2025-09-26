@@ -51,7 +51,9 @@ export const AttractionCard = ({
                     </Label>
                 </section>
                 <section>
-                    <Tick label={"hello"}/>
+                    {features.map((feature, i) => (
+                        <Tick key={i} label={feature}/>
+                    ))}
                 </section>
 
                 {/* Details */}
@@ -84,9 +86,11 @@ interface TickProps {
 }
 const Tick = ({label}: TickProps) => {
     return(
-        <section className={"flex items-center"}>
-            <CircleCheck size={16}/>
-            {label}
+        <section className={"flex items-start gap-2"}>
+            <section>
+                <CircleCheck size={16} className={"mt-1"}/>
+            </section>
+            <Label className={"font-normal text-sm"}>{label}</Label>
         </section>
     )
 }

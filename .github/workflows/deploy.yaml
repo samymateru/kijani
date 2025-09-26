@@ -16,5 +16,5 @@ jobs:
             git pull
             docker build --no-cache -t kijani .
             docker builder prune -f
-            docker compose down
-            docker compose up -d
+            sudo docker compose down
+            sudo docker compose up -d
