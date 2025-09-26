@@ -36,17 +36,17 @@ import {Label} from "@/components/ui/label";
 
 export default function GalleryPage() {
     return(
-        <section className={"py-5 flex flex-col gap-20"}>
+        <section className={"py-5 flex flex-col gap-20 mt-10"}>
             <section className={"flex flex-col gap-4"}>
                 <Label className={"text-primary font-bold text-3xl"}>Discover Our Garden Through the Lens</Label>
-                <Label className={"font-semibold text-sm italic text-neutral-700 w-full md:w-1/2"}>Step into a world of vibrant colors and natural beauty as we invite you to explore
+                <Label className={"font-medium text-base italic text-neutral-800 w-full md:w-1/2"}>Step into a world of vibrant colors and natural beauty as we invite you to explore
                     Chanika Kijani through captivating photographs. Each image tells a story of growth,
                     serenity, and the timeless charm of our botanical garden. Let your eyes wander through
                     blooming flowers, lush greenery, and peaceful pathways — all captured through the
                     lens to bring the garden closer to you
                 </Label>
             </section>
-            <section className="columns-[300px] gap-4 bg-green-100">
+            <section className="columns-[300px] gap-4">
                 <GalleryItem src={PIC1} label="Event Night" />
                 <GalleryItem src={PIC2} label="Event Night" />
                 <GalleryItem src={PIC3} label="Event Night" />
@@ -84,8 +84,8 @@ interface GalleryItemProps {
 
 const GalleryItem = ({ src, label }: GalleryItemProps) => {
     return(
-        <section className={"rounded-lg w-full mt-5 md:mt-3 hover:scale-[102%] transition-[scale] duration-200 ease-in-out"}>
-            <Card className="!p-0 w-full bg-green-100 shadow-md rounded-lg">
+        <section className={"rounded-lg w-full mt-6 md:mt-3 hover:scale-[102%] transition-[scale] duration-200 ease-in-out"}>
+            <Card className="!p-0 w-full shadow-md rounded-lg">
                 <CardContent className="!p-0 relative rounded-lg">
                     {/* Image */}
                     <div className="relative w-full overflow-hidden">

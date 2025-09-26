@@ -52,13 +52,13 @@ export const EventScroller = () => {
     return(
         <section className="flex justify-center h-fit py-10 px-4 sm:px-8 md:px-14">
             <section className="flex flex-col items-center gap-4 w-full">
-                <section className={"self start w-full flex flex-col md:flex-row gap-4 items-center justify-between"}>
-                    <section>
+                <section className={"w-full flex flex-col md:flex-row gap-5 md:gap-10 items-center justify-between"}>
+                    <section className={"flex-1"}>
                         <Label className="scroll-m-20 text-primary text-2xl md:text-3xl font-extrabold tracking-tight text-center">
                             Up Coming Events
                         </Label>
                     </section>
-                    <section className={"flex justify-center w-full"}>
+                    <section className={"flex flex-1 justify-center md:justify-end w-full"}>
                         <Button variant={"outline"} className={"border cursor-pointer border-neutral-400 rounded-md md:rounded-full w-[calc(100%-50px)] md:w-[300px]"}>
                             View All Events
                             <ArrowRight size={16}/>

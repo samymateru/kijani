@@ -44,15 +44,15 @@ const events: EventCardProps[] = [
 
 export default function EventsPage(){
     return(
-        <section className={"flex flex-col gap-16 mt-5"}>
+        <section className={"flex flex-col gap-16 mt-10" }>
             <section className={"flex flex-col gap-4"}>
                 <Label className={"font-bold text-primary text-3xl md:text-4xl"}>
                     Highlights from Our Top <br/>Garden Events
                 </Label>
-                <Label className={""}>Relive the standout experiences that define Chanika Kijani</Label>
+                <Label className={"font-semibold text-base italic text-neutral-700"}>Relive the standout experiences that define Chanika Kijani</Label>
             </section>
 
-            <section>
+            <section className={"grid-cols-1 grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-3 "}>
                 {
                     events.map((event,index) => (
                         <EventCard

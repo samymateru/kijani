@@ -2,13 +2,13 @@ import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
 import {Mail, Phone, SendHorizonal} from "lucide-react";
 import {Textarea} from "@/components/ui/textarea";
-import {Button} from "@/components/ui/button";
 import FB from "@/public/assets/fb.svg"
 import INSTAGRAM from "@/public/assets/instagram.svg"
 import TWITTER from "@/public/assets/twitter.svg"
 import WHATSAPP from "@/public/assets/whatsapp.svg"
-
+import TIKTOK from "@/public/assets/tiktok.svg"
 import Image from "next/image";
+import {Button} from "@/components/ui/button";
 
 export const ContactUs = ()=> {
     return(
@@ -81,10 +81,11 @@ export const ContactUs = ()=> {
                             <Label className={"font-bold text-primary text-center  text-xl"}>Social Media</Label>
                         </section>
                         <section className={"flex items-center gap-2"}>
-                            <SocialMediaIcon src={FB}/>
-                            <SocialMediaIcon src={INSTAGRAM}/>
+                            <SocialMediaIcon src={INSTAGRAM} href={"https://www.instagram.com/chanika_kijani?igsh=MWtpZ2hnYjN3bTFiZQ%3D%3D&utm_source=qr\n"}/>
+                            <SocialMediaIcon src={WHATSAPP} href={"https://wa.me/255782835507\n"}/>
+                            <SocialMediaIcon src={TIKTOK} href={"https://www.tiktok.com/@chanika.kijani?_t=ZM-8zewMGpW8cq&_r=1"}/>
                             <SocialMediaIcon src={TWITTER}/>
-                            <SocialMediaIcon src={WHATSAPP}/>
+                            <SocialMediaIcon src={FB}/>
                         </section>
                     </section>
                 </section>
@@ -133,13 +134,24 @@ const ContactTextArea = ({
 
 
 interface  SocialMediaIconProps{
-    src: string
+    src: string,
+    href?: string
 }
 
-export const SocialMediaIcon = ({src}: SocialMediaIconProps) => {
+export const SocialMediaIcon = ({src, href}: SocialMediaIconProps) => {
     return(
-        <Button  className={"w-9 h-9 md:w-8 md:h-8 cursor-pointer border-neutral-400 flex !p-1"} variant={"outline"}>
-            <Image width={100} src={src} alt="Instagram" className="w-8 h-8" />
-        </Button>
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Social media link"
+        >
+            <Button
+                className="w-9 h-9 md:w-8 md:h-8 cursor-pointer border-neutral-400 flex !p-1"
+                variant="outline"
+            >
+                <Image width={100} height={100} src={src} alt="Social icon" className="w-8 h-8" />
+            </Button>
+        </a>
     )
 }

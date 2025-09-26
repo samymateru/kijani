@@ -8,12 +8,13 @@ import TWITTER from "@/public/assets/twitter.svg";
 import WHATSAPP from "@/public/assets/whatsapp.svg";
 import {Button} from "@/components/ui/button";
 import Image from "next/image";
+import TIKTOK from "@/public/assets/tiktok.svg";
 
 export const BottomNavigation = () => {
     return (
         <section className={"min-h-[300px] bg-primary p-8"}>
             <section className={"flex justify-start flex-col md:flex-row gap-10"}>
-                <section className={"flex flex-col gap-2 flex-1 h-[300px]"}>
+                <section className={"flex flex-col gap-4 flex-1 h-[400px]"}>
                     <section>
                         <Label className={"font-bold text-xl text-primary-foreground"}>We Offer</Label>
                     </section>
@@ -32,30 +33,31 @@ export const BottomNavigation = () => {
                         />
                     </section>
                 </section>
-                <section className={"flex flex-col gap-2 flex-1 h-[300px]"}>
+                <section className={"flex flex-col gap-4 flex-1 h-[400px]"}>
                     <section>
                         <Label className={"font-bold text-xl text-primary-foreground"}>Quick Links</Label>
                     </section>
-                    <section className={"flex flex-col gap-4"}>
-                        <BottomNavigationLink href={"#"} label={"Home"}/>
-                        <BottomNavigationLink href={"#"} label={"Our Services"}/>
-                        <BottomNavigationLink href={"#"} label={"About Us"}/>
-                        <BottomNavigationLink href={"#"} label={"Gallery"}/>
+                    <section className={"flex flex-col gap-6"}>
+                        <BottomNavigationLink href={"/"} label={"Home"}/>
+                        <BottomNavigationLink href={"/services"} label={"Our Services"}/>
+                        <BottomNavigationLink href={"/events"} label={"Events"}/>
+                        <BottomNavigationLink href={"/gallery"} label={"Gallery"}/>
                     </section>
                 </section>
-                <section className={"flex flex-col gap-2 flex-1 h-[300px]"}>
+                <section className={"flex flex-col gap-4 flex-1 h-[400px]"}>
                   <section>
                     <Label className={"font-bold text-xl text-primary-foreground"}>Get in touch</Label>
                   </section>
                   <section className={"flex flex-col gap-4"}>
                     <BottomNavigationContact label={"Chanika Ward, Ilala District, Dar es Salaam"} icon={<MapPinned size={18} className={"text-primary-foreground"}/>}/>
-                    <BottomNavigationContact label={"+255 782 835 507"} icon={<Phone size={18} className={"text-primary-foreground"}/>}/>
-                    <BottomNavigationContact label={"info@chanikakijani.co.tz"} icon={<Mail size={18} className={"text-primary-foreground"}/>}/>
+                    <BottomNavigationContact href={"https://wa.me/255782835507\n"} label={"+255 782 835 507"} icon={<Phone size={18} className={"text-primary-foreground"}/>}/>
+                    <BottomNavigationContact href={"mailto:info@chanikakijani.co.tz?subject=Inquiry from Website"} label={"info@chanikakijani.co.tz"} icon={<Mail size={18} className={"text-primary-foreground"}/>}/>
                     <section id={"social"} className={"flex items-center gap-2"}>
-                        <SocialMediaIcon src={FB}/>
-                        <SocialMediaIcon src={INSTAGRAM}/>
+                        <SocialMediaIcon src={INSTAGRAM} href={"https://www.instagram.com/chanika_kijani?igsh=MWtpZ2hnYjN3bTFiZQ%3D%3D&utm_source=qr\n"}/>
+                        <SocialMediaIcon src={WHATSAPP} href={"https://wa.me/255782835507\n"}/>
+                        <SocialMediaIcon src={TIKTOK} href={"https://www.tiktok.com/@chanika.kijani?_t=ZM-8zewMGpW8cq&_r=1"}/>
                         <SocialMediaIcon src={TWITTER}/>
-                        <SocialMediaIcon src={WHATSAPP}/>
+                        <SocialMediaIcon src={FB}/>
                     </section>
                 </section>
             </section>
@@ -75,7 +77,7 @@ const BottomNavigationService = ({
     description
     }: BottomNavigationServiceProps) => {
     return(
-        <section className={"flex flex-col"}>
+        <section className={"flex flex-col h-10"}>
             <section>
                 <Label className={"font-bold text-base text-primary-foreground"}>{label}</Label>
             </section>
@@ -113,31 +115,52 @@ const BottomNavigationLink = ({
 
 interface BottomNavigationContactProps{
     label: string
-    icon: ReactNode
+    icon: ReactNode,
+    href?: string
 }
 
 
 const BottomNavigationContact = ({
     label,
-    icon
+    icon,
+    href
     }: BottomNavigationContactProps) => {
     return(
-        <section className={"flex items-center gap-2"}>
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Social media link"
+        >
+        <section className={"flex items-center gap-2 h-10"}>
             {icon}
-            <Label className={"font-normal text-sm text-primary-foreground italic"}>{label}</Label>
+            <Label className={"font-normal text-sm h-full text-primary-foreground italic"}>{label}</Label>
         </section>
+        </a>
     )
 }
 
 
 interface  SocialMediaIconProps{
     src: string
+    href?: string
+
 }
 
-export const SocialMediaIcon = ({src}: SocialMediaIconProps) => {
+export const SocialMediaIcon = ({src, href}: SocialMediaIconProps) => {
     return(
-        <Button  className={"w-8 h-8 cursor-pointer border-neutral-400 flex !p-1"} variant={"outline"}>
-            <Image width={100} src={src} alt="Instagram" className="w-8 h-8" />
-        </Button>
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Social media link"
+        >
+            <Button
+                className="w-9 h-9 md:w-8 md:h-8 cursor-pointer border-neutral-400 flex !p-1"
+                variant="outline"
+            >
+                <Image width={100} height={100} src={src} alt="Social icon" className="w-8 h-8" />
+            </Button>
+        </a>
     )
 }
