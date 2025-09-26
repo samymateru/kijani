@@ -3,12 +3,14 @@ import {ContactUs} from "@/components/shared/contact_us";
 import {GalleryScroller} from "@/components/shared/gallery_scroller";
 import {AboutUsSection} from "@/components/shared/about_us";
 import {EventScroller} from "@/app/home/_home/components/events_scroller";
+import {AttractionSection} from "@/components/shared/attraction_section";
 
 export default function Home() {
   return (
       <section className={"flex flex-col md:gap-16  overflow-x-hidden"}>
         <HeroSectionT1/>
         <AboutUsSection/>
+          <AttractionSection/>
         <GalleryScroller/>
         <EventScroller/>
         <ContactUs/>
