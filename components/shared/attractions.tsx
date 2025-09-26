@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import {StaticImport} from "next/dist/shared/lib/get-img-props";
+import {CircleCheck} from "lucide-react";
 
 
 export interface AttractionCardProps {
@@ -49,6 +50,9 @@ export const AttractionCard = ({
                         {description}
                     </Label>
                 </section>
+                <section>
+                    <Tick label={"hello"}/>
+                </section>
 
                 {/* Details */}
                 <section className="flex justify-start flex-col gap-[2px] mt-3 flex-wrap">
@@ -73,3 +77,16 @@ const EventActionItem = ({ title, variant = "outline" }: EventActionItemProps) =
         {title}
     </Button>
 );
+
+
+interface TickProps {
+    label: string
+}
+const Tick = ({label}: TickProps) => {
+    return(
+        <section className={"flex items-center"}>
+            <CircleCheck size={16}/>
+            {label}
+        </section>
+    )
+}

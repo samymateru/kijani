@@ -70,7 +70,8 @@ export const EventScroller = () => {
                         <CarouselContent>
                             {
                                 events.map((event,index) => (
-                                    <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/3">
+                                    <CarouselItem key={index}
+                                                  className="basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/3">
                                         <Card className="!p-0 bg-neutral-500">
                                             <CardContent className="!p-0">
                                                 <EventCard
