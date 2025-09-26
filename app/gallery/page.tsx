@@ -24,10 +24,6 @@ import PIC22 from "@/public/assets/gallery/kijani 1 (6).jpg"
 import PIC23 from "@/public/assets/gallery/kijani 1 (8).jpg"
 
 
-
-
-
-
 import {Card, CardContent} from "@/components/ui/card";
 import Image from "next/image";
 import {Label} from "@/components/ui/label";
