@@ -14,9 +14,9 @@ import PIC2 from "@/public/assets/ATTR6.png"
 import PIC3 from "@/public/assets/ATTR2.png"
 import PIC4 from "@/public/assets/ATTR7.png"
 import {Button} from "@/components/ui/button";
-import {ArrowRight} from "lucide-react";
 import {StaticImport} from "next/dist/shared/lib/get-img-props";
 import {useRouter} from "next/navigation";
+import {ArrowRight} from "lucide-react";
 
 
 
@@ -31,8 +31,8 @@ export const GalleryScroller = () => {
                             Top Sites To Visit
                         </Label>
                     </section>
-                    <section>
-                        <Button onClick={() => router.push("/gallery")} variant={"outline"} className={"border cursor-pointer border-neutral-400 rounded-full"}>
+                    <section className={"w-full flex justify-center"}>
+                        <Button onClick={() => router.push("/gallery")} variant={"outline"} className={"border cursor-pointer border-neutral-400 w-[calc(100%-50px)] md:w-[300px] rounded-md md:rounded-full"}>
                             View All Sites
                             <ArrowRight size={16}/>
                         </Button>

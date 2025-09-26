@@ -44,14 +44,12 @@ export const HeroSectionT1 = () => {
                     quality={90}
                 />
             </section>
-            <section id={"call-to-actions"} className={"flex md:hidden flex-col items-center gap-2"}>
-                <Button variant={"outline"} className={"border-primary flex items-center gap-4 w-[300px] h-10 rounded-full"}>
-                    <Label className={"font-normal text-sm"}>Our Services</Label>
-                    <Eye size={18}/>
+            <section id={"call-to-actions"} className={"flex md:hidden flex-col items-center w-full gap-2"}>
+                <Button variant={"outline"} className={"border-primary flex items-center gap-4 w-[calc(100%-50px)] md:w-[300px] rounded-md  h-10 md:rounded-full"}>
+                    <Label className={"font-normal text-sm"}>View Our Services</Label>
                 </Button>
-                <Button className={"flex items-center w-[300px] h-10 gap-4 rounded-full"}>
+                <Button className={"flex items-center w-[calc(100%-50px)] md:w-[300px] rounded-md  h-10 md:rounded-full"}>
                     <Label className={"font-normal text-sm"}>Get in touch</Label>
-                    <ArrowRight size={18}/>
                 </Button>
             </section>
         </section>
