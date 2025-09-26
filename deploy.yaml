@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  kijani:
+    image: kijani
+    container_name: kijani
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    env_file:
+      - .env
