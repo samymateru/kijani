@@ -8,7 +8,7 @@ export const HeroSectionT1 = () => {
     return(
         <section className={"flex items-center gap-4 flex-col md:flex-row py-10 px-4 sm:px-8 md:px-14"}>
             <section id={"content"} className={"flex-1 flex flex-col gap-12"}>
-                <section className={"flex flex-col gap-5"}>
+                <section className={"flex flex-col gap-10"}>
                     <section id={"large-description"} className={"flex flex-col gap-2"}>
                         <Label className={"scroll-m-20 text-primary text-2xl md:text-3xl font-extrabold tracking-tight text-balance"}>
                             CHANIKA KIJANI BOTANICAL GARDENS AND AMUSEMENT PARK

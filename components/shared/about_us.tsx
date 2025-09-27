@@ -6,15 +6,14 @@ import PIC from "@/public/assets/ATT5.png";
 export const AboutUsSection = () => {
     return (
         <section className={"flex flex-col gap-2 py-10 px-4 sm:px-8 md:px-14"}>
-            <section>
+            <section className={"flex flex-col gap-6"}>
                 <section>
-                    <Label className={"scroll-m-20 text-neutral-700 text-3xl font-extrabold tracking-tight text-balance"}>About Us</Label>
-                    <Label className={"scroll-m-20 text-primary text-3xl font-extrabold tracking-tight text-balance"}> Chanika Kijani Botanical Garden</Label>
+                    <Label className={"scroll-m-20 text-neutral-700 text-3xl md:text-4xl font-bold tracking-tight text-balance"}>About Us</Label>
+                    <Label className={"scroll-m-20 text-primary text-3xl md:text-4xl font-bold tracking-tight text-balance"}> Chanika Kijani Botanical Garden</Label>
                 </section>
                 <section>
                     <Label className="text-sm md:text-base text-neutral-700 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at
-                        sapien nec justo fringilla accumsan. Suspendisse potenti.
+
                     </Label>
                 </section>
             </section>

@@ -20,7 +20,7 @@ export default function RootLayout({
       <header className="sticky top-0 z-50 bg-background px-2 sm:px-5 md:px-10 oveflow-hidden">
         <TopNavigation />
       </header>
-        <section className={"overflow-hidden px-5 sm:px-5 md:px-14"}>
+        <section className={"overflow-hidden px-3 sm:px-5 md:px-14"}>
           {children}
         </section>
         <BottomNavigation/>

@@ -35,7 +35,7 @@ export const EventCard = ({
                 />
                 <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-primary/80 to-transparent rounded-b-md" />
 
-                <Label className="absolute bottom-3 left-4 text-neutral-100 text-lg md:text-xl font-extrabold tracking-tight drop-shadow-md">
+                <Label className="absolute bottom-3 left-4 text-neutral-100 text-lg md:text-xl font-extrabold tracking-tight drop-shadow-md backdrop-blur-sm bg-black/30 px-3 py-1 rounded">
                     {title}
                 </Label>
             </section>

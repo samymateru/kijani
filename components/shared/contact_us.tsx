@@ -39,8 +39,8 @@ export const ContactUs = ()=> {
                             label={"Your Message"}
                         />
                     </section>
-                    <section className={"flex w-full justify-center"}>
-                        <Button className={" flex items-center w-[calc(100%-50px)] mxx-auto md:w-[300px] h-10 gap-4 rounded-md md:rounded-full"}>
+                    <section className={"flex w-full justify-center md:justify-start"}>
+                        <Button className={"flex w-[calc(100%-50px)] md:w-[300px] h-10 gap-4 rounded-md md:rounded-full"}>
                             <Label className={"font-normal text-sm"}>Submit</Label>
                             <SendHorizonal size={18}/>
                         </Button>
