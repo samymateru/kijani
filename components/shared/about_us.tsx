@@ -27,8 +27,8 @@ export const AboutUsSection = () => {
                         priority
                         quality={90}
                     />
-                    <section className={"w-full"}>
-                        <section id="about-body" className="w-full flex-col md:flex-row flex  gap-2">
+                    <section className={"w-full "}>
+                        <section id="about-body" className="w-full h-full flex-col md:flex-row flex  gap-2">
                             <AboutContent title={"Our Vision"} data={"Chanika City Botanical Garden is a uniquely designed" +
                                 " botanical park. Our vision is to create a peaceful and" +
                                 " vibrant space for leisure, learning, cultural celebration, " +
@@ -40,9 +40,9 @@ export const AboutUsSection = () => {
                                 "people together, and provide a space where families, schools, and organizations can " +
                                 "celebrate life, learn, and reconnect with the environment."}/>
                         </section>
-                        <section>
-                            hello there
-                        </section>
+                        {/*<section className={""}>*/}
+                        {/*    */}
+                        {/*</section>*/}
                     </section>
                 </section>
 
@@ -61,9 +61,9 @@ interface AboutContentProps{
 
 const AboutContent = ({title, data}: AboutContentProps) => {
     return (
-        <section id={"mission"} className={'bg-green-200 flex flex-col gap-3 py-5 px-4 flex-1 md:p-5 rounded-lg'}>
-            <section id={"vision"}>
-                <Label className="text-primary text-lg md:text-xl font-extrabold tracking-tight drop-shadow-md">
+        <section id={"mission"} className={'bg-green-200 flex flex-col gap-5 py-5 px-4 flex-1 md:p-5 rounded-lg'}>
+            <section id={"vision"} className={"flex flex-col gap-3"}>
+                <Label className="text-primary text-xl md:text-2xl font-extrabold tracking-tight drop-shadow-md">
                     {title}
                 </Label>
                 <Label className={"font-normal text-sm text-balance"}>

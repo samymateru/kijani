@@ -1,9 +1,9 @@
 import {AttractionCard} from "@/components/shared/attractions";
-import PIC1 from "@/public/assets/10.jpg"
 import {Label} from "@/components/ui/label";
 import GRAND_WALK from "@/public/assets/304.jpg";
 import CHILDREN from "@/public/assets/3379.jpg"
 import GARDEN from "@/public/assets/ATTR6.png"
+import ACC from "@/public/assets/house.jpeg"
 
 export const AttractionSection = () => {
     return(
@@ -59,10 +59,9 @@ export const AttractionSection = () => {
                             ]}
                         />
                     </section>
-
                     <section className="w-full md:flex-1">
                         <AttractionCard
-                            src={PIC1}
+                            src={ACC}
                             title={"Accommodation"}
                             description={"Stay overnight in natu​re with comfort"}
                             features={[
