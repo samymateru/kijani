@@ -15,7 +15,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-svw h-svh overflow-hidden bg-background">
+    <html lang="en" className="w-svw h-svh overflow-hidden bg-background scroll-smooth">
       <body className="hw-svw h-svh bg-background overflow-y-auto">
       <header className="sticky top-0 z-50 bg-background px-2 sm:px-5 md:px-10 oveflow-hidden">
         <TopNavigation />

@@ -12,11 +12,11 @@ import {Button} from "@/components/ui/button";
 
 export const ContactUs = ()=> {
     return(
-        <section className={"flex gap-10 md:gap-4 py-10 px-4 sm:px-8 flex-col md:flex-row md:px-14"} >
+        <section id={"contact"} className={"flex scroll-mt-16 gap-10 md:gap-4 py-10 px-4 sm:px-8 flex-col md:flex-row md:px-14"} >
             <section id={"form"} className={"flex flex-col gap-10 flex-1"}>
                 <section className={"flex flex-col gap-2"}>
                     <section id={"header"}>
-                        <Label className={"scroll-m-20 text-primary text-2xl md:text-3xl  font-extrabold tracking-tight text-balance"}>Contact Us</Label>
+                        <Label className={"scroll-m-20 text-primary text-2xl md:text-3xl  font-extrabold tracking-tight text-balance"}>Get In Touch</Label>
                     </section>
                     <section id={"description"}>
                         <Label className={"font-semibold text-sm italic text-neutral-700"}>

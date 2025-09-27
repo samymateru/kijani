@@ -1,12 +1,16 @@
+"use client"
 import Image from "next/image";
 import Logo from "@/public/assets/HOME.jpg";
 import {Label} from "@/components/ui/label";
 import {Button} from "@/components/ui/button";
 import {ArrowRight, Eye} from "lucide-react";
+import {useRouter} from "next/navigation";
 
 export const HeroSectionT1 = () => {
+    const router = useRouter()
+
     return(
-        <section className={"flex items-center gap-4 flex-col md:flex-row py-10 px-4 sm:px-8 md:px-14"}>
+        <section className={"flex scroll-mt-32 items-center gap-4 flex-col md:flex-row py-10 px-4 sm:px-8 md:px-14"}>
             <section id={"content"} className={"flex-1 flex flex-col gap-12"}>
                 <section className={"flex flex-col gap-10"}>
                     <section id={"large-description"} className={"flex flex-col gap-2"}>
@@ -25,14 +29,16 @@ export const HeroSectionT1 = () => {
                     </section>
                 </section>
                 <section id={"call-to-actions"} className={"md:flex hidden items-center gap-2 flex-col md:flex-row"}>
-                    <Button variant={"outline"} className={"border-primary flex items-center gap-4 w-[200px] h-10 rounded-full"}>
+                    <Button onClick={() => router.push("/services")} variant={"outline"} className={"border-primary flex items-center gap-4 w-[200px] h-10 rounded-full"}>
                         <Label className={"font-normal text-sm"}>Our Services</Label>
                         <Eye size={18}/>
                     </Button>
-                    <Button className={" flex items-center w-[200px] h-10 gap-4 rounded-full"}>
-                        <Label className={"font-normal text-sm"}>Get in touch</Label>
-                        <ArrowRight size={18}/>
-                    </Button>
+                    <a href="#contact">
+                        <Button className={"flex items-center w-[200px] h-10 gap-4 rounded-full"}>
+                            <Label className={"font-normal text-sm"}>Get in touch</Label>
+                            <ArrowRight size={18} />
+                        </Button>
+                    </a>
                 </section>
             </section>
             <section id={"picture"} className={"flex-1"}>
@@ -45,12 +51,14 @@ export const HeroSectionT1 = () => {
                 />
             </section>
             <section id={"call-to-actions"} className={"flex md:hidden flex-col items-center w-full gap-2"}>
-                <Button variant={"outline"} className={"border-primary flex items-center gap-4 w-[calc(100%-50px)] md:w-[300px] rounded-md  h-10 md:rounded-full"}>
+                <Button onClick={() => router.push("/services")} variant={"outline"} className={"border-primary flex items-center gap-4 w-[calc(100%-50px)] md:w-[300px] rounded-md  h-10 md:rounded-full"}>
                     <Label className={"font-normal text-sm"}>View Our Services</Label>
                 </Button>
-                <Button className={"flex items-center w-[calc(100%-50px)] md:w-[300px] rounded-md  h-10 md:rounded-full"}>
-                    <Label className={"font-normal text-sm"}>Get in touch</Label>
-                </Button>
+                <a href="#contact" className={"flex w-full justify-center"}>
+                    <Button className={"flex items-center w-[calc(100%-50px)] md:w-[300px] rounded-md  h-10 md:rounded-full"}>
+                        <Label className={"font-normal text-sm"}>Get in touch</Label>
+                    </Button>
+                </a>
             </section>
         </section>
     )
