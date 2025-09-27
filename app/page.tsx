@@ -10,7 +10,7 @@ export default function Home() {
       <section className={"flex flex-col md:gap-16  overflow-x-hidden"}>
         <HeroSectionT1/>
         <AboutUsSection/>
-          <AttractionSection/>
+        <AttractionSection/>
         <GalleryScroller/>
         <EventScroller/>
         <ContactUs/>

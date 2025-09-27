@@ -98,17 +98,17 @@ const GalleryItem = ({ src, label }: GalleryItemProps) => {
                     </div>
 
                     {/* Caption text */}
-                    {label && (
-                        <div className="absolute bottom-0 w-full bg-gradient-to-t from-primary/90 to-transparent text-white p-3 rounded-lg flex items-cente justify-between">
-                            <Label className="text-xl font-bold">
-                              {label}
-                            </Label>
-                            {/*<Button  className="bg-primary-foreground cursor-pointer hover:bg-primary-foreground/80 w-[100px] text-primary text-xs sm:text-sm px-3 py-1 rounded-full shadow-md transition">*/}
-                            {/*    View*/}
-                            {/*</Button>*/}
-                        </div>
+                    {/*{label && (*/}
+                    {/*    <div className="absolute bottom-0 w-full bg-gradient-to-t from-primary/90 to-transparent text-white p-3 rounded-lg flex items-cente justify-between">*/}
+                    {/*        <Label className="text-xl font-bold">*/}
+                    {/*          {label}*/}
+                    {/*        </Label>*/}
+                    {/*        /!*<Button  className="bg-primary-foreground cursor-pointer hover:bg-primary-foreground/80 w-[100px] text-primary text-xs sm:text-sm px-3 py-1 rounded-full shadow-md transition">*!/*/}
+                    {/*        /!*    View*!/*/}
+                    {/*        /!*</Button>*!/*/}
+                    {/*    </div>*/}
 
-                    )}
+                    {/*)}*/}
                 </CardContent>
             </Card>
         </section>
