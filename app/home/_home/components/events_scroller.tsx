@@ -50,7 +50,7 @@ const events: EventCardProps[] = [
 
 export const EventScroller = () => {
     return(
-        <section className="flex justify-center h-fit py-10 px-4 sm:px-8 md:px-14">
+        <section className="flex justify-center h-fit py-10 px-4 sm:px-8 md:px-14 mb-10 md:mb-4">
             <section className="flex flex-col items-center gap-4 w-full">
                 <section className={"w-full flex flex-col md:flex-row gap-5 md:gap-10 items-center justify-between"}>
                     <section className={"flex-1"}>
@@ -65,8 +65,8 @@ export const EventScroller = () => {
                         </Button>
                     </section>
                 </section>
-                <section className="w-full max-w-7xl flex justify-center">
-                    <Carousel opts={{ align: "start" }} className="w-full">
+                <section className="w-full max-w-7xl  flex justify-center">
+                    <Carousel opts={{ align: "start" }} className="w-full relative  [&_.carousel-button]:hidden">
                         <CarouselContent>
                             {
                                 events.map((event,index) => (
@@ -88,8 +88,10 @@ export const EventScroller = () => {
                             }
 
                         </CarouselContent>
-                        <CarouselPrevious variant="default" />
-                        <CarouselNext variant="default" />
+                        <div className="flex gap-10 justify-center mt-4 absolute md:relative md:bottom-1/2 -bottom-12 left-1/2 -translate-x-1/2">
+                            <CarouselPrevious className="w-10 h-10 rounded-md" variant="default" />
+                            <CarouselNext className="w-10 h-10 rounded-md" variant="default" />
+                        </div>
                     </Carousel>
                 </section>
             </section>

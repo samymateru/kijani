@@ -107,40 +107,11 @@ const config: Config = {
 			'accordion-up': 'accordion-up 0.2s ease-out'
 		},
 		fontFamily: {
-			heading: [
-				'var(--font-heading)',
-				'ui-sans-serif',
-				'-apple-system',
-				'BlinkMacSystemFont',
-				'Segoe UI Variable Display',
-				'Segoe UI',
-				'Helvetica',
-				'Apple Color Emoji',
-				'Arial',
-				'sans-serif',
-				'Segoe UI Emoji',
-				'Segoe UI Symbol',
-				'Noto Color Emoji'
-			],
+			sans: ['var(--font-poppins)', 'sans-serif'],
 			mono: [
 				'var(--font-mono)',
 				...defaultTheme.fontFamily.mono
 			],
-			sans: [
-				'var(--font-sans)',
-				'ui-sans-serif',
-				'-apple-system',
-				'BlinkMacSystemFont',
-				'Segoe UI Variable Display',
-				'Segoe UI',
-				'Helvetica',
-				'Apple Color Emoji',
-				'Arial',
-				'sans-serif',
-				'Segoe UI Emoji',
-				'Segoe UI Symbol',
-				'Noto Color Emoji'
-			]
 		},
 		screens: {
 			'main-hover': {

@@ -1,5 +1,4 @@
 import {AttractionCard} from "@/components/shared/attractions";
-import {Label} from "@/components/ui/label";
 import GRAND_WALK from "@/public/assets/304.jpg";
 import CHILDREN from "@/public/assets/3379.jpg"
 import GARDEN from "@/public/assets/ATTR6.png"
@@ -8,10 +7,6 @@ import ACC from "@/public/assets/house.jpeg"
 export const AttractionSection = () => {
     return(
         <section className={"flex flex-col gap-6 pb-4 px-5 md:px-12"}>
-            <section>
-                <Label className={"font-bold text-3xl md:text-4xl text-primary"}>Our Best Attractions</Label>
-            </section>
-
             <section className={"flex flex-col gap-10"}>
                 <section className={"w-full flex flex-col justify-center gap-10 md:flex-row"}>
                     <section className="w-full md:flex-1">
