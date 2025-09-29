@@ -15,5 +15,7 @@ jobs:
             cd kijani
             git pull
             sudo docker build -t kijani .
-            sudo docker stop ki
+            sudo docker stop kijani || true
+            sudo docker rm kijani || true
+            docker run -d -p 3000:3000 --name kijani kijani
             
